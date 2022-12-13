@@ -5,12 +5,12 @@ import { getStorage } from "firebase/storage";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDQtcv6gN3QLgfoJStROa-NUcg2s5tZS-Q",
-  authDomain: "billy-241f5.firebaseapp.com",
-  projectId: "billy-241f5",
-  storageBucket: "billy-241f5.appspot.com",
-  messagingSenderId: "329108487664",
-  appId: "1:329108487664:web:bd010aeda605457e31b135"
+  apiKey: "AIzaSyAR9MGvKVKUQ66jtQztUZ9xw__OhwbC4kk",
+  authDomain: "glidevendors.firebaseapp.com",
+  projectId: "glidevendors",
+  storageBucket: "glidevendors.appspot.com",
+  messagingSenderId: "229097165374",
+  appId: "1:229097165374:web:c93b7a18d1306b7b75776f"
 };
 
 const app = initializeApp(firebaseConfig);

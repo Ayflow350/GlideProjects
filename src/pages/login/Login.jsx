@@ -4,6 +4,8 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import {AuthContext} from "../../context/AuthContext"
+import text from '../../assets/testedd.jpeg'
+
 
 const Login = () => {
   const [error, setError] = useState(false);
@@ -23,31 +25,46 @@ const Login = () => {
         const user = userCredential.user;
         dispatch({type:"LOGIN", payload:user})
         navitage("/")
+        alert('logged in successfully')
       })
       .catch((error) => {
-        setError(true);
+        alert(error)
       });
   };
 
   return (
-    <div className="login">
-      <form onSubmit={handleLogin}>
-        <input
-          type="email"
-          placeholder="email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="password"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit" onClick={
-          handleLogin
-        }>Login</button>
-        {error && <span>Wrong email or password!</span>}
-      </form>
-    </div>
+    <div className="boys">
+    <section>
+            <div className="register">
+                <div className="col-1">
+                    <h2>Sign In</h2>
+                    <span>register and enjoy the service</span>
+    
+                    <form id='form' className='flex flex-col' onSubmit={handleLogin}>
+                    <input
+placeholder='Email'
+value={email}
+onChange={e => setEmail(e.target.value)}
+
+/>
+<input
+type='password'
+placeholder='Password'
+value={password}
+onChange={e => setPassword(e.target.value)}
+
+/>
+                 <button className='btn' onClick={handleLogin}>Sign In</button>
+                    </form>
+    
+                </div>
+                <div className="col-2">
+                    <img src={text} alt="" />
+                </div>
+            </div>
+        </section>
+        </div>
+
   );
 };
 

@@ -13,7 +13,7 @@ const data = [
   { name: "August", Total: 0 },
   { name: "september", Total: 0 },
   { name: "October", Total: 0 },
-  { name: "November", Total: 5000 },
+  { name: "November", Total: 0 },
   
 ];
 

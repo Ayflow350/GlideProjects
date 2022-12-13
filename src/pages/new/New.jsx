@@ -131,7 +131,7 @@ const New = ({ inputs, title }) => {
                   />
                 </div>
               ))}
-              <button disabled={per !== null && per < 100} type="submit">
+              <button disabled={per !== null && per < 100} type="submit" onClick={handleAdd}>
                 Send
               </button>
             </form>
